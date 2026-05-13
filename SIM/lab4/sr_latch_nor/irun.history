@@ -1,0 +1,2 @@
+s1(27Aug2023:17:13:17):  xrun -access rwc ./sr_latch_nor.v ./stimulus.v 
+s2(27Aug2023:17:13:25):  xrun -access rwc ./sr_latch_nor.v ./stimulus.v -gui 

@@ -1,0 +1,3 @@
+s1(16Feb2024:16:19:55):  xrun -access rwc pipeline.v tb_pipeline.v -gui 
+#e2(21Aug2024:16:20:26): source ./xcelium.d/env.d/env.history.21Aug2024_16_20_26
+s2(21Aug2024:16:20:26):  xrun -access rwc pipeline.v tb_pipeline.v -gui 

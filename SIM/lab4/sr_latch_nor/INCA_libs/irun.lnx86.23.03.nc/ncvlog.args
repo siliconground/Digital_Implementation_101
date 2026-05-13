@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx86.23.03.nc
+-RUNMODE
+-amsdlibdir
+./INCA_libs/AMSD
+./sr_latch_nor.v
+./stimulus.v
+-CDSLIB
+./INCA_libs/irun.lnx86.23.03.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.23.03.nc/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx86.23.03.nc/xllibs
+-ALLOWUNBOUND

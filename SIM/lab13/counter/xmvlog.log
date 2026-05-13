@@ -1,0 +1,15 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Aug 22, 2024 at 10:25:57 KST
+xmvlog
+    -MESS
+    -linedebug
+    ./counter.v
+    ./tb_counter.v
+
+file: ./counter.v
+	module worklib.counter
+		errors: 0, warnings: 0
+file: ./tb_counter.v
+	module worklib.tb_counter
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Aug 22, 2024 at 10:25:57 KST  (total: 00:00:00)

@@ -1,0 +1,14 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Aug 21, 2024 at 14:31:45 KST
+xmvlog
+    -MESS
+    ./mux4_to_1.v
+    ./tb_mux4_to_1.v
+
+file: ./mux4_to_1.v
+	module mux_lib.mux4_to_1
+		errors: 0, warnings: 0
+file: ./tb_mux4_to_1.v
+	module mux_lib.tb_mux_4_to_1
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Aug 21, 2024 at 14:31:45 KST  (total: 00:00:00)

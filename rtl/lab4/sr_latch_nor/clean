@@ -1,0 +1,2 @@
+xrun -clean;
+rm -rf irun.* *.log waves.shm

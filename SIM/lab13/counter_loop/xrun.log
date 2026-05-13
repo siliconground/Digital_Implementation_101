@@ -1,0 +1,23 @@
+xrun(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s005: Started on Aug 22, 2024 at 10:45:04 KST
+xrun
+	-access rwc
+	./counter_loop.v
+	./tb_counter_loop.v
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/tools/cadence/XCELIUMMAIN2403/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_counter_loop.clk tb_counter_loop.cnt tb_counter_loop.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 2150 NS + 0
+./tb_counter_loop.v:27 		$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s005: Exiting on Aug 22, 2024 at 14:24:10 KST  (total: 03:39:06)

@@ -1,0 +1,14 @@
+lab1: clock generation
+lab2: basic simulation + Makefile and automation
+lab3: 4-bit full adder(gate level modeling)
+lab4: SR-latch
+lab5: gate delay
+lab6: clock gating
+lab7: operator
+lab8: mux 4-to-1(data flow modeling)
+lab9: 4-bit full adder(data flow modeling)
+lab10:mux 4-to-1(behavioral modeling)
+lab11: register and reset
+lab12: 10-bit adder
+lab13: counters
+lab14: pipeline

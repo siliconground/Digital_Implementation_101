@@ -1,0 +1,83 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Aug 23 13:43:38 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+#@(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+#@(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+#@(#)CDS: CPE v22.16-s050
+#@(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+#@ source pnr1.tcl
+#@ Begin verbose source (pre): source pnr1.tcl
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+read_mmmc sample.view
+#@ Begin verbose source sample.view (pre)
+create_library_set -name max_timing\
+   -timing ../lib/slow_vdd1v0_basicCells.lib
+create_library_set -name min_timing\
+   -timing ../lib/fast_vdd1v0_basicCells.lib
+create_timing_condition -name default_mapping_tc_2\
+   -library_sets min_timing
+create_timing_condition -name default_mapping_tc_1\
+   -library_sets max_timing
+create_rc_corner -name rccorners\
+   -cap_table ../captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+   -pre_route_res 1\
+   -post_route_res 1\
+   -pre_route_cap 1\
+   -post_route_cap 1\
+   -post_route_cross_cap 1\
+   -pre_route_clock_res 0\
+   -pre_route_clock_cap 0\
+   -qrc_tech ../QRC_Tech/gpdk045.tch
+create_delay_corner -name max_delay\
+   -timing_condition {default_mapping_tc_1}\
+   -rc_corner rccorners
+create_delay_corner -name min_delay\
+   -timing_condition {default_mapping_tc_2}\
+   -rc_corner rccorners
+create_constraint_mode -name sdc_cons\
+   -sdc_files\
+    ../syn/outputs/counter_sdc.sdc
+create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+set_analysis_view -setup wc -hold bc
+#@ End verbose source sample.view
+create_library_set -name max_timing\
+   -timing ../lib/slow_vdd1v0_basicCells.lib
+create_library_set -name min_timing\
+   -timing ../lib/fast_vdd1v0_basicCells.lib
+create_timing_condition -name default_mapping_tc_2\
+   -library_sets min_timing
+create_timing_condition -name default_mapping_tc_1\
+   -library_sets max_timing
+create_rc_corner -name rccorners\
+   -cap_table ../captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+   -pre_route_res 1\
+   -post_route_res 1\
+   -pre_route_cap 1\
+   -post_route_cap 1\
+   -post_route_cross_cap 1\
+   -pre_route_clock_res 0\
+   -pre_route_clock_cap 0\
+   -qrc_tech ../QRC_Tech/gpdk045.tch
+create_delay_corner -name max_delay\
+   -timing_condition {default_mapping_tc_1}\
+   -rc_corner rccorners
+create_delay_corner -name min_delay\
+   -timing_condition {default_mapping_tc_2}\
+   -rc_corner rccorners
+create_constraint_mode -name sdc_cons\
+   -sdc_files\
+    ../syn/outputs/counter_sdc.sdc
+create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+set_analysis_view -setup wc -hold bc
+#@ End verbose source pnr1.tcl

@@ -1,0 +1,11 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Aug 19, 2024 at 21:40:25 KST
+xmvlog
+    -MESS
+    -linedebug
+    ./clock_gen.v
+
+file: ./clock_gen.v
+	module clock_gen.clock_gen
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Aug 19, 2024 at 21:40:25 KST  (total: 00:00:00)

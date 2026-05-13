@@ -1,0 +1,53 @@
+xrun(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s005: Started on Aug 21, 2024 at 15:50:37 KST
+xrun
+	-access rwc
+	adder.v
+	tb_adder.v
+	-gui
+file: adder.v
+	module worklib.adder:v
+		errors: 0, warnings: 0
+file: tb_adder.v
+	module worklib.tb_adder:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_adder
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.adder:v <0x0fd99c05>
+			streams:   2, words:   535
+		worklib.tb_adder:v <0x5887d43b>
+			streams:   6, words:  3467
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               5       5
+		Scalar wires:            2       -
+		Vectored wires:          3       -
+		Always blocks:           2       2
+		Initial blocks:          1       1
+		Pseudo assignments:      4       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_adder:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/tools/cadence/XCELIUMMAIN2403/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_adder.clk tb_adder.in1 tb_adder.in2 tb_adder.out tb_adder.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 550 NS + 0
+./tb_adder.v:45 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s005: Exiting on Aug 21, 2024 at 15:53:10 KST  (total: 00:02:33)

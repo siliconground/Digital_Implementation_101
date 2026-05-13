@@ -1,0 +1,14 @@
+xmelab(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+xmelab: *E,DLMKDF: Unable to add default DEFINE std       /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/STD.
+xmelab: *E,DLMKDF: Unable to add default DEFINE synopsys  /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/SYNOPSYS.
+xmelab: *E,DLMKDF: Unable to add default DEFINE ieee      /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/IEEE.
+xmelab: *E,DLMKDF: Unable to add default DEFINE ambit     /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/AMBIT.
+xmelab: *E,DLMKDF: Unable to add default DEFINE vital_memory /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/VITAL_MEMORY.
+xmelab: *E,DLMKDF: Unable to add default DEFINE xmutils /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/XMUTILS.
+xmelab: *E,DLMKDF: Unable to add default DEFINE xminternal /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/XMINTERNAL.
+xmelab: *E,DLMKDF: Unable to add default DEFINE xmmodels /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/XMMODELS.
+xmelab: *E,DLMKDF: Unable to add default DEFINE ncutils /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/NCUTILS.
+xmelab: *E,DLMKDF: Unable to add default DEFINE ncinternal /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/NCINTERNAL.
+xmelab: *E,DLMKDF: Unable to add default DEFINE ncmodels /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/NCMODELS.
+xmelab: *E,DLMKDF: Unable to add default DEFINE cds_assertions /opt/tools/cadence/XCELIUMMAIN2403/tools/inca/files/CDS_ASSERTIONS.
+xmelab: *F,DLINIT: Failed to initialize library system interface.

@@ -1,2 +1,4 @@
-# Digital_Implementation_101
-Basic Digital Implementation: RTL-to-GDSII using Cadence DDI/SSV Solutions
+# vlsi_fundamental
+Basic concepts and fundamentals need to VLSI Design
+
+

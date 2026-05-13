@@ -1,0 +1,82 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.16-s082_1, built Fri Jun 7 09:42:52 PDT 2024
+Options:	-stylus 
+Date:		Fri Aug 23 14:10:53 2024
+Host:		npit.ic.rnd1 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz 30720KB)
+OS:		Red Hat Enterprise Linux Server 7.9 (Maipo)
+
+License:
+		[14:10:54.440185] Configured Lic search path (22.01-s003): 35266@npit-service1.iptime.org
+
+		invs	Innovus Implementation System	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_24524_486bd3a9-ee8f-4f5a-bc8b-7311dd09524c_npit.ic.rnd1_william_QAnKD7.
+
+Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+@innovus 1> gui_hide
+@innovus 2> set_db init_power_nets VDD
+1 VDD
+@innovus 3> set_db init_power_nets VSS
+1 VSS
+@innovus 4> set_analysis_view -setup wc -hold bc
+**ERROR: (TCLCMD-1230):	The command set_analysis_view is called before the design is initialized and not from init_design.
+
+
+@innovus 5> read_physical lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+
+Usage: read_physical [-help] {[-oa_ref_libs <lib1 [lib2] ...> [-oa_search_libs <lib1 [lib2] ...>] [-oa_tech_lib <lib1 [lib2] ...>]] | [-add_oa_ref_libs <lib1 [lib2] ...> [-oa_lib_path <libPath>]] | -lefs <lef1 [lef2] ...> | -add_lefs <lef1 [lef2] ...>}
+
+**ERROR: (IMPTCM-48):	"lef" is not a legal option for command "read_physical". Either the current option or an option prior to it is not specified correctly.
+  
+  
+@innovus 6> read_physical -lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+
+Loading LEF file ../lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file ../lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+0
+@innovus 7> read_netlist ../syn/outputs/counter_netlist.v -top counter
+#% Begin Load netlist data ... (date=08/23 14:17:03, mem=1325.6M)
+*** Begin netlist parsing (mem=1469.6M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../syn/outputs/counter_netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1472.594M, initial mem = 654.262M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1472.6M) ***
+#% End Load netlist data ... (date=08/23 14:17:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=1329.2M, current mem=1329.2M)
+Set top cell to counter.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell counter ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 575 modules.
+** info: there are 21 stdCell insts.
+** info: there are 21 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 1530.023M, initial mem = 654.262M) ***
+0
+@innovus 8> exit
+
+*** Memory Usage v#1 (Current mem = 1530.117M, initial mem = 654.262M) ***
+*** Message Summary: 1 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:41.6, real=0:07:06, mem=1530.1M) ---

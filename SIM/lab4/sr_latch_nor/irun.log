@@ -1,0 +1,35 @@
+xrun: 23.03-s003: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	23.03-s003: Started on Aug 27, 2023 at 17:13:25 KST
+xrun
+	-access rwc
+	./sr_latch_nor.v
+	./stimulus.v
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/tools/cadence/XCELIUMMAIN23.03.003/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm stimulus.q stimulus.qbar stimulus.reset stimulus.set
+Created probe 1
+xcelium> run
+                   0 set = 0, reset = 0, q = x, qbar = x
+
+                   5 set = 1, reset = 0, q = 1, qbar = 0
+
+                  10 set = 0, reset = 0, q = 1, qbar = 0
+
+                  15 set = 0, reset = 1, q = 0, qbar = 1
+
+                  20 set = 0, reset = 0, q = 0, qbar = 1
+
+                  25 set = 1, reset = 1, q = 0, qbar = 0
+
+Simulation complete via $finish(1) at time 30 NS + 0
+./stimulus.v:35 	#5 $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	23.03-s003: Exiting on Aug 27, 2023 at 17:16:55 KST  (total: 00:03:30)

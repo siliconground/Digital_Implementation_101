@@ -1,0 +1,104 @@
+[08/23 14:10:54      0s] 
+[08/23 14:10:54      0s] Cadence Innovus(TM) Implementation System.
+[08/23 14:10:54      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[08/23 14:10:54      0s] 
+[08/23 14:10:54      0s] Version:	v22.16-s082_1, built Fri Jun 7 09:42:52 PDT 2024
+[08/23 14:10:54      0s] Options:	-stylus 
+[08/23 14:10:54      0s] Date:		Fri Aug 23 14:10:53 2024
+[08/23 14:10:54      0s] Host:		npit.ic.rnd1 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz 30720KB)
+[08/23 14:10:54      0s] OS:		Red Hat Enterprise Linux Server 7.9 (Maipo)
+[08/23 14:10:54      0s] 
+[08/23 14:10:54      0s] License:
+[08/23 14:10:54      0s] 		[14:10:54.440185] Configured Lic search path (22.01-s003): 35266@npit-service1.iptime.org
+[08/23 14:10:54      0s] 
+[08/23 14:10:54      0s] 		invs	Innovus Implementation System	22.1	checkout succeeded
+[08/23 14:10:54      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[08/23 14:11:08     13s] 
+[08/23 14:11:08     13s] 
+[08/23 14:11:14     19s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+[08/23 14:11:17     22s] @(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+[08/23 14:11:17     22s] @(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+[08/23 14:11:17     22s] @(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+[08/23 14:11:17     22s] @(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+[08/23 14:11:17     22s] @(#)CDS: CPE v22.16-s050
+[08/23 14:11:17     22s] @(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[08/23 14:11:17     22s] @(#)CDS: OA 22.60-p095 Wed Apr 17 03:30:14 2024
+[08/23 14:11:17     22s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[08/23 14:11:17     22s] @(#)CDS: RCDB 11.15.0
+[08/23 14:11:17     22s] @(#)CDS: STYLUS 22.15-s003_1 (04/04/2024 05:58 PDT)
+[08/23 14:11:17     22s] @(#)CDS: IntegrityPlanner-22.16-14533 (22.16) (2024-03-20 15:48:15+0800)
+[08/23 14:11:17     22s] Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_24524_486bd3a9-ee8f-4f5a-bc8b-7311dd09524c_npit.ic.rnd1_william_QAnKD7.
+
+[08/23 14:11:17     22s] Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_24524_486bd3a9-ee8f-4f5a-bc8b-7311dd09524c_npit.ic.rnd1_william_QAnKD7.
+[08/23 14:11:17     22s] 
+[08/23 14:11:17     22s] Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+[08/23 14:11:18     24s] 
+[08/23 14:11:18     24s] **INFO:  MMMC transition support version v31-84 
+[08/23 14:11:18     24s] 
+[08/23 14:11:22     27s] @innovus 1> gui_hide
+@innovus 2> set_db init_power_nets VDD
+1 VDD
+[08/23 14:11:40     28s] @innovus 3> set_db init_power_nets VSS
+1 VSS
+[08/23 14:11:43     28s] @innovus 4> set_analysis_view -setup wc -hold bc
+**ERROR: (TCLCMD-1230):	The command set_analysis_view is called before the design is initialized and not from init_design.
+[08/23 14:13:07     31s] 
+[08/23 14:13:07     31s] 
+[08/23 14:13:07     31s] @innovus 5> read_physical lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+
+[08/23 14:15:57     36s] Usage: read_physical [-help] {[-oa_ref_libs <lib1 [lib2] ...> [-oa_search_libs <lib1 [lib2] ...>] [-oa_tech_lib <lib1 [lib2] ...>]] | [-add_oa_ref_libs <lib1 [lib2] ...> [-oa_lib_path <libPath>]] | -lefs <lef1 [lef2] ...> | -add_lefs <lef1 [lef2] ...>}
+[08/23 14:15:57     36s] 
+[08/23 14:15:57     36s] **ERROR: (IMPTCM-48):	"lef" is not a legal option for command "read_physical". Either the current option or an option prior to it is not specified correctly.
+[08/23 14:15:57     36s]   
+[08/23 14:15:57     36s]   
+[08/23 14:15:57     36s] @innovus 6> read_physical -lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+
+[08/23 14:16:09     36s] Loading LEF file ../lef/gsclib045_tech.lef ...
+[08/23 14:16:09     37s] Set DBUPerIGU to M2 pitch 400.
+[08/23 14:16:09     37s] 
+[08/23 14:16:09     37s] Loading LEF file ../lef/gsclib045_macro.lef ...
+[08/23 14:16:09     37s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[08/23 14:16:09     37s] Type 'man IMPLF-200' for more detail.
+[08/23 14:16:09     37s] 
+[08/23 14:16:09     37s] ##  Check design process and node:  
+[08/23 14:16:09     37s] ##  Both design process and tech node are not set.
+[08/23 14:16:09     37s] 
+[08/23 14:16:09     37s] 0
+[08/23 14:16:09     37s] @innovus 7> read_netlist ../syn/outputs/counter_netlist.v -top counter
+#% Begin Load netlist data ... (date=08/23 14:17:03, mem=1325.6M)
+[08/23 14:17:03     38s] *** Begin netlist parsing (mem=1469.6M) ***
+[08/23 14:17:03     38s] Created 0 new cells from 0 timing libraries.
+[08/23 14:17:03     38s] Reading netlist ...
+[08/23 14:17:03     38s] Backslashed names will retain backslash and a trailing blank character.
+[08/23 14:17:03     38s] Reading verilog netlist '../syn/outputs/counter_netlist.v'
+[08/23 14:17:03     38s] 
+[08/23 14:17:03     38s] *** Memory Usage v#1 (Current mem = 1472.594M, initial mem = 654.262M) ***
+[08/23 14:17:03     38s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1472.6M) ***
+[08/23 14:17:03     38s] #% End Load netlist data ... (date=08/23 14:17:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=1329.2M, current mem=1329.2M)
+[08/23 14:17:03     38s] Set top cell to counter.
+[08/23 14:17:04     39s] Hooked 0 DB cells to tlib cells.
+[08/23 14:17:04     39s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1334.5M, current mem=1334.5M)
+[08/23 14:17:04     39s] Starting recursive module instantiation check.
+[08/23 14:17:04     39s] No recursion found.
+[08/23 14:17:04     39s] Building hierarchical netlist for Cell counter ...
+[08/23 14:17:04     39s] ***** UseNewTieNetMode *****.
+[08/23 14:17:04     39s] *** Netlist is unique.
+[08/23 14:17:04     39s] Setting Std. cell height to 3420 DBU (smallest netlist inst).
+[08/23 14:17:04     39s] ** info: there are 575 modules.
+[08/23 14:17:04     39s] ** info: there are 21 stdCell insts.
+[08/23 14:17:04     39s] ** info: there are 21 stdCell insts with at least one signal pin.
+[08/23 14:17:04     39s] 
+[08/23 14:17:04     39s] *** Memory Usage v#1 (Current mem = 1530.023M, initial mem = 654.262M) ***
+[08/23 14:17:04     39s] 0
+[08/23 14:17:04     39s] @innovus 8> exit
+
+[08/23 14:17:59     41s] *** Memory Usage v#1 (Current mem = 1530.117M, initial mem = 654.262M) ***
+[08/23 14:17:59     41s] 
+[08/23 14:17:59     41s] *** Summary of all messages that are not suppressed in this session:
+[08/23 14:17:59     41s] Severity  ID               Count  Summary                                  
+[08/23 14:17:59     41s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[08/23 14:17:59     41s] ERROR     IMPTCM-48            1  "%s" is not a legal option for command "...
+[08/23 14:17:59     41s] ERROR     TCLCMD-1230          1  The command set_analysis_view is called ...
+[08/23 14:17:59     41s] *** Message Summary: 1 warning(s), 2 error(s)
+[08/23 14:17:59     41s] 
+[08/23 14:17:59     41s] --- Ending "Innovus" (totcpu=0:00:41.6, real=0:07:06, mem=1530.1M) ---

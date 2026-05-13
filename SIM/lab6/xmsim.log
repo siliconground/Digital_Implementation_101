@@ -1,0 +1,16 @@
+xmsim(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmsim(64)	24.03-s005: Started on Aug 21, 2024 at 10:55:54 KST
+xmsim
+    -MESS
+    tb_clk_gating
+
+Loading snapshot worklib.tb_clk_gating:module .................... Done
+xcelium> run
+Initial Value [                   0]
+Clock enable [                 100]
+Clock disable [                 200]
+Simulation ends [                 300]
+Simulation complete via $finish(1) at time 300 NS + 0
+./tb_clk_gating.v:35 	$finish;
+xcelium> exit
+TOOL:	xmsim(64)	24.03-s005: Exiting on Aug 21, 2024 at 10:55:54 KST  (total: 00:00:00)

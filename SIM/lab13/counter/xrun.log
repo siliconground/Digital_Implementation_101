@@ -1,0 +1,52 @@
+xrun: 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s012: Started on Feb 16, 2024 at 17:00:18 KST
+xrun
+	-access rwc
+	counter.v
+	tb_counter.v
+	-gui
+file: counter.v
+	module worklib.counter:v
+		errors: 0, warnings: 0
+file: tb_counter.v
+	module worklib.tb_counter:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_counter
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.counter:v <0x4173c07f>
+			streams:   2, words:   452
+		worklib.tb_counter:v <0x09643880>
+			streams:   6, words:  1403
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               3       3
+		Scalar wires:            2       -
+		Vectored wires:          1       -
+		Always blocks:           2       2
+		Initial blocks:          1       1
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_counter:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_counter.clk tb_counter.cnt tb_counter.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 2150 NS + 0
+./tb_counter.v:27 		$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	22.03-s012: Exiting on Feb 16, 2024 at 17:04:33 KST  (total: 00:04:15)

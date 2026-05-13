@@ -1,0 +1,4 @@
+s1(15Feb2024:16:53:16):  xrun -access -rwc clk_gating.v tb_clk_gating.v -gui 
+s2(15Feb2024:16:54:05):  xrun -access rwc ./clk_gating.v ./tb_clk_gating.v -gui 
+#e3(19Aug2024:21:51:15): source ./xcelium.d/env.d/env.history.19Aug2024_21_51_15
+s3(19Aug2024:21:51:15):  xrun -clean 

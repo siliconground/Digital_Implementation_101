@@ -1,0 +1,252 @@
+[08/23 13:43:15      0s] 
+[08/23 13:43:15      0s] Cadence Innovus(TM) Implementation System.
+[08/23 13:43:15      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[08/23 13:43:15      0s] 
+[08/23 13:43:15      0s] Version:	v22.16-s082_1, built Fri Jun 7 09:42:52 PDT 2024
+[08/23 13:43:15      0s] Options:	-stylus -file pnr1.tcl 
+[08/23 13:43:15      0s] Date:		Fri Aug 23 13:43:15 2024
+[08/23 13:43:15      0s] Host:		npit.ic.rnd1 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz 30720KB)
+[08/23 13:43:15      0s] OS:		Red Hat Enterprise Linux Server 7.9 (Maipo)
+[08/23 13:43:15      0s] 
+[08/23 13:43:15      0s] License:
+[08/23 13:43:15      0s] 		[13:43:15.440201] Configured Lic search path (22.01-s003): 35266@npit-service1.iptime.org
+[08/23 13:43:15      0s] 
+[08/23 13:43:15      0s] 		invs	Innovus Implementation System	22.1	checkout succeeded
+[08/23 13:43:15      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[08/23 13:43:29     13s] 
+[08/23 13:43:29     13s] 
+[08/23 13:43:35     19s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:38     22s] @(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+[08/23 13:43:38     22s] @(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:38     22s] @(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+[08/23 13:43:38     22s] @(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+[08/23 13:43:38     22s] @(#)CDS: CPE v22.16-s050
+[08/23 13:43:38     22s] @(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:38     22s] @(#)CDS: OA 22.60-p095 Wed Apr 17 03:30:14 2024
+[08/23 13:43:38     22s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[08/23 13:43:38     22s] @(#)CDS: RCDB 11.15.0
+[08/23 13:43:38     22s] @(#)CDS: STYLUS 22.15-s003_1 (04/04/2024 05:58 PDT)
+[08/23 13:43:38     22s] @(#)CDS: IntegrityPlanner-22.16-14533 (22.16) (2024-03-20 15:48:15+0800)
+[08/23 13:43:38     22s] Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_21314_e8ab509a-0ed3-4385-ae91-828774b6b012_npit.ic.rnd1_william_ulJOZH.
+
+[08/23 13:43:38     22s] Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_21314_e8ab509a-0ed3-4385-ae91-828774b6b012_npit.ic.rnd1_william_ulJOZH.
+[08/23 13:43:38     22s] 
+[08/23 13:43:38     22s] Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+[08/23 13:43:40     24s] 
+[08/23 13:43:40     24s] **INFO:  MMMC transition support version v31-84 
+[08/23 13:43:40     24s] 
+[08/23 13:43:43     27s] #@ Processing -files option
+[08/23 13:43:43     27s] @innovus 1> source pnr1.tcl
+[08/23 13:43:43     27s] #@ Begin verbose source (pre): source pnr1.tcl
+[08/23 13:43:43     27s] @file 1: #######################################################
+[08/23 13:43:43     27s] @file 2: #                                                     
+[08/23 13:43:43     27s] @file 3: #  Innovus Command Logging File                     
+[08/23 13:43:43     27s] @file 4: #  Created on Fri Aug 23 11:14:22 2024                
+[08/23 13:43:43     27s] @file 5: #                                                     
+[08/23 13:43:43     27s] @file 6: #######################################################
+[08/23 13:43:43     27s] @file 7:
+[08/23 13:43:43     27s] @file 8: #@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:43     27s] @file 9: #@(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+[08/23 13:43:43     27s] @file 10: #@(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:43     27s] @file 11: #@(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+[08/23 13:43:43     27s] @file 12: #@(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+[08/23 13:43:43     27s] @file 13: #@(#)CDS: CPE v22.16-s050
+[08/23 13:43:43     27s] @file 14: #@(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[08/23 13:43:43     27s] @file 15:
+[08/23 13:43:43     27s] @@file 16: set_db init_power_nets VDD
+[08/23 13:43:43     27s] @@file 17: set_db init_ground_nets VSS
+[08/23 13:43:43     27s] @@file 18: read_mmmc sample.view
+[08/23 13:43:43     27s] #@ Begin verbose source sample.view (pre)
+[08/23 13:43:43     27s] @file 1:
+[08/23 13:43:43     27s] @@file 2: create_library_set -name max_timing\
+[08/23 13:43:43     27s]    -timing ../lib/slow_vdd1v0_basicCells.lib
+[08/23 13:43:43     27s] @file 4:
+[08/23 13:43:43     27s] @@file 5: create_library_set -name min_timing\
+[08/23 13:43:43     27s]    -timing ../lib/fast_vdd1v0_basicCells.lib
+[08/23 13:43:43     27s] @file 7:
+[08/23 13:43:43     27s] @@file 8: create_timing_condition -name default_mapping_tc_2\
+[08/23 13:43:43     27s]    -library_sets min_timing
+[08/23 13:43:43     27s] @@file 10: create_timing_condition -name default_mapping_tc_1\
+[08/23 13:43:43     27s]    -library_sets max_timing
+[08/23 13:43:43     27s] @file 12:
+[08/23 13:43:43     27s] @@file 13: create_rc_corner -name rccorners\
+[08/23 13:43:43     27s]    -cap_table ../captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+[08/23 13:43:43     27s]    -pre_route_res 1\
+[08/23 13:43:43     27s]    -post_route_res 1\
+[08/23 13:43:43     27s]    -pre_route_cap 1\
+[08/23 13:43:43     27s]    -post_route_cap 1\
+[08/23 13:43:43     27s]    -post_route_cross_cap 1\
+[08/23 13:43:43     27s]    -pre_route_clock_res 0\
+[08/23 13:43:43     27s]    -pre_route_clock_cap 0\
+[08/23 13:43:43     27s]    -qrc_tech ../QRC_Tech/gpdk045.tch
+[08/23 13:43:43     27s] @file 23:
+[08/23 13:43:43     27s] @@file 24: create_delay_corner -name max_delay\
+[08/23 13:43:43     27s]    -timing_condition {default_mapping_tc_1}\
+[08/23 13:43:43     27s]    -rc_corner rccorners
+[08/23 13:43:43     27s] @@file 27: create_delay_corner -name min_delay\
+[08/23 13:43:43     27s]    -timing_condition {default_mapping_tc_2}\
+[08/23 13:43:43     27s]    -rc_corner rccorners
+[08/23 13:43:43     27s] @file 30:
+[08/23 13:43:43     27s] @@file 31: create_constraint_mode -name sdc_cons\
+[08/23 13:43:43     27s]    -sdc_files\
+[08/23 13:43:43     27s]     ../syn/outputs/counter_sdc.sdc
+[08/23 13:43:43     27s] @file 34:
+[08/23 13:43:43     27s] @@file 35: create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+[08/23 13:43:43     27s] @@file 36: create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+[08/23 13:43:43     27s] @file 37:
+[08/23 13:43:43     27s] @@file 38: set_analysis_view -setup wc -hold bc
+[08/23 13:43:43     27s] @file 39:
+[08/23 13:43:43     27s] @file 40:
+[08/23 13:43:43     27s] #@ End verbose source sample.view
+[08/23 13:43:43     27s] Reading max_timing timing library '/home/william/vlsi_fundamental/lib/slow_vdd1v0_basicCells.lib' ...
+[08/23 13:43:44     28s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/william/vlsi_fundamental/lib/slow_vdd1v0_basicCells.lib)
+[08/23 13:43:44     28s] Read 480 cells in library 'slow_vdd1v0' 
+[08/23 13:43:44     28s] Reading min_timing timing library '/home/william/vlsi_fundamental/lib/fast_vdd1v0_basicCells.lib' ...
+[08/23 13:43:44     29s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/william/vlsi_fundamental/lib/fast_vdd1v0_basicCells.lib)
+[08/23 13:43:44     29s] Read 480 cells in library 'fast_vdd1v0' 
+[08/23 13:43:44     29s] Ending "PreSetAnalysisView" (total cpu=0:00:01.2, real=0:00:01.0, peak res=1379.2M, current mem=1315.4M)
+[08/23 13:43:44     29s] @file 19: #@ Begin verbose source sample.view (pre)
+[08/23 13:43:44     29s] @@file 20: create_library_set -name max_timing\
+[08/23 13:43:44     29s]    -timing ../lib/slow_vdd1v0_basicCells.lib
+[08/23 13:43:44     29s] The existing library_set 'max_timing' has been replaced with new attributes.
+[08/23 13:43:44     29s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1317.7M, current mem=1317.7M)
+[08/23 13:43:44     29s] 
+[08/23 13:43:44     29s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[08/23 13:43:44     29s] Summary for sequential cells identification: 
+[08/23 13:43:44     29s]   Identified SBFF number: 0
+[08/23 13:43:44     29s]   Identified MBFF number: 0
+[08/23 13:43:44     29s]   Identified SB Latch number: 0
+[08/23 13:43:44     29s]   Identified MB Latch number: 0
+[08/23 13:43:44     29s]   Not identified SBFF number: 0
+[08/23 13:43:44     29s]   Not identified MBFF number: 0
+[08/23 13:43:44     29s]   Not identified SB Latch number: 0
+[08/23 13:43:44     29s]   Not identified MB Latch number: 0
+[08/23 13:43:44     29s]   Number of sequential cells which are not FFs: 0
+[08/23 13:43:44     29s] **WARN: (IMPOPT-3000):	Buffer footprint is not defined or is an invalid buffer footprint.
+[08/23 13:43:44     29s] Type 'man IMPOPT-3000' for more detail.
+[08/23 13:43:44     29s] **WARN: (IMPOPT-3001):	Inverter footprint is not defined or is an invalid inverter footprint.
+[08/23 13:43:44     29s] Type 'man IMPOPT-3001' for more detail.
+[08/23 13:43:44     29s]  Visiting view : default_view_setup
+[08/23 13:43:44     29s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[08/23 13:43:44     29s]    : PowerDomain = none : no stdDelay from this view
+[08/23 13:43:44     29s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[08/23 13:43:44     29s]  Visiting view : default_view_hold
+[08/23 13:43:44     29s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[08/23 13:43:44     29s]    : PowerDomain = none : no stdDelay from this view
+[08/23 13:43:44     29s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[08/23 13:43:44     29s] *INFO : stdDelay is calculated as zero; using legacy method.
+[08/23 13:43:44     29s] *INFO : stdSlew is calculated as zero; using legacy method.
+[08/23 13:43:44     29s] TLC MultiMap info (StdDelay):
+[08/23 13:43:44     29s]   : min_delay + min_timing + 1 + no RcCorner := -9.22337e+17ps
+[08/23 13:43:44     29s]   : min_delay + min_timing + 1 + default_rc_corner := -9.22337e+17ps
+[08/23 13:43:44     29s]   : max_delay + max_timing + 1 + no RcCorner := -9.22337e+17ps
+[08/23 13:43:44     29s]   : max_delay + max_timing + 1 + default_rc_corner := -9.22337e+17ps
+[08/23 13:43:44     29s]  Setting StdDelay to: 10ps
+[08/23 13:43:44     29s] 
+[08/23 13:43:44     29s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[08/23 13:43:44     29s] 
+[08/23 13:43:44     29s] TimeStamp Deleting Cell Server Begin ...
+[08/23 13:43:44     29s] 
+[08/23 13:43:44     29s] TimeStamp Deleting Cell Server End ...
+[08/23 13:43:44     29s] @@file 22: create_library_set -name min_timing\
+[08/23 13:43:44     29s]    -timing ../lib/fast_vdd1v0_basicCells.lib
+[08/23 13:43:44     29s] The existing library_set 'min_timing' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 24: create_timing_condition -name default_mapping_tc_2\
+[08/23 13:43:44     29s]    -library_sets min_timing
+[08/23 13:43:44     29s] The existing timing condition 'default_mapping_tc_2' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 26: create_timing_condition -name default_mapping_tc_1\
+[08/23 13:43:44     29s]    -library_sets max_timing
+[08/23 13:43:44     29s] The existing timing condition 'default_mapping_tc_1' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 28: create_rc_corner -name rccorners\
+[08/23 13:43:44     29s]    -cap_table ../captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+[08/23 13:43:44     29s]    -pre_route_res 1\
+[08/23 13:43:44     29s]    -post_route_res 1\
+[08/23 13:43:44     29s]    -pre_route_cap 1\
+[08/23 13:43:44     29s]    -post_route_cap 1\
+[08/23 13:43:44     29s]    -post_route_cross_cap 1\
+[08/23 13:43:44     29s]    -pre_route_clock_res 0\
+[08/23 13:43:44     29s]    -pre_route_clock_cap 0\
+[08/23 13:43:44     29s]    -qrc_tech ../QRC_Tech/gpdk045.tch
+[08/23 13:43:44     29s] The existing rc_corner 'rccorners' has been replaced with new attributes.
+[08/23 13:43:44     29s] Extraction setup Started 
+[08/23 13:43:44     29s] @@file 38: create_delay_corner -name max_delay\
+[08/23 13:43:44     29s]    -timing_condition {default_mapping_tc_1}\
+[08/23 13:43:44     29s]    -rc_corner rccorners
+[08/23 13:43:44     29s] The existing delay_corner 'max_delay' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 41: create_delay_corner -name min_delay\
+[08/23 13:43:44     29s]    -timing_condition {default_mapping_tc_2}\
+[08/23 13:43:44     29s]    -rc_corner rccorners
+[08/23 13:43:44     29s] The existing delay_corner 'min_delay' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 44: create_constraint_mode -name sdc_cons\
+[08/23 13:43:44     29s]    -sdc_files\
+[08/23 13:43:44     29s]     ../syn/outputs/counter_sdc.sdc
+[08/23 13:43:44     29s] The existing constraint_mode 'sdc_cons' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 47: create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+[08/23 13:43:44     29s] The existing analysis_view 'wc' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 48: create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+[08/23 13:43:44     29s] The existing analysis_view 'bc' has been replaced with new attributes.
+[08/23 13:43:44     29s] @@file 49: set_analysis_view -setup wc -hold bc
+[08/23 13:43:44     29s] **ERROR: (TCLCMD-1230):	The command set_analysis_view is called before the design is initialized and not from init_design.
+[08/23 13:43:44     29s] **ERROR: (IMPSE-110):	File 'pnr1.tcl' line 49: errors out.
+[08/23 13:43:44     29s] #@ End verbose source pnr1.tcl
+[08/23 13:43:44     29s] **ERROR: (IMPSYT-6692):	Invalid return code while executing 'pnr1.tcl' was returned and script processing was stopped. Review the following error in 'pnr1.tcl' then restart.
+[08/23 13:43:44     29s] Error info: pnr1.tcl: 
+[08/23 13:43:44     29s]     while executing
+[08/23 13:43:44     29s] "set_analysis_view -setup wc -hold bc"
+[08/23 13:43:44     29s]     (file "pnr1.tcl" line 49)
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "::se_source_orig pnr1.tcl"
+[08/23 13:43:44     29s]     ("uplevel" body line 1)
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "uplevel [concat ::se_source_orig $args]"
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "if { !$no_encoding && $encodingName != ""  } {
+[08/23 13:43:44     29s]                   set st [uplevel [concat ::se_source_orig " -encoding " $encodingName " "  $args]]
+[08/23 13:43:44     29s]    ..."
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "if {[::SE::source_verbose_file_state $file_name] == 1} {
+[08/23 13:43:44     29s]               ::SE::source_verbose_start $file_name
+[08/23 13:43:44     29s]               if { !$no_encoding && $enco..."
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "if {$useTclVerbose} {
+[08/23 13:43:44     29s]           # use tcl internal method
+[08/23 13:43:44     29s]           set st ""
+[08/23 13:43:44     29s]           if {[::SE::source_verbose_file_state $file_name] == 1} {
+[08/23 13:43:44     29s]      ..."
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "if {$largeFile == 1} {
+[08/23 13:43:44     29s]     if {$enableVerbose == 0 && [::SE::isEchoFile] == 1} {
+[08/23 13:43:44     29s]       $putCmd "Sourcing $file_name"
+[08/23 13:43:44     29s]     }
+[08/23 13:43:44     29s]     set st [uplevel [concat..."
+[08/23 13:43:44     29s]     (procedure "source" line 185)
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "source pnr1.tcl"
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "::se::run_command_from_console "source pnr1.tcl""
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "eval_novus {::se::run_command_from_console "source pnr1.tcl"}"
+[08/23 13:43:44     29s]     (in namespace inscope "::" script line 1)
+[08/23 13:43:44     29s]     invoked from within
+[08/23 13:43:44     29s] "namespace inscope :: eval_novus "::se::run_command_from_console \"source $fileName\""".
+[08/23 13:43:44     29s] @innovus 2> 
+[08/23 13:43:57     29s] --------------------------------------------------------------------------------
+[08/23 13:43:57     29s] Exiting Innovus on Fri Aug 23 13:43:57 2024
+[08/23 13:43:57     29s]   Total CPU time:     0:00:30
+[08/23 13:43:57     29s]   Total real time:    0:00:43
+[08/23 13:43:57     29s]   Peak memory (main): 1338.53MB
+[08/23 13:43:57     29s] 
+[08/23 13:43:57     29s] 
+[08/23 13:43:57     29s] *** Memory Usage v#1 (Current mem = 1483.484M, initial mem = 662.262M) ***
+[08/23 13:43:57     29s] 
+[08/23 13:43:57     29s] *** Summary of all messages that are not suppressed in this session:
+[08/23 13:43:57     29s] Severity  ID               Count  Summary                                  
+[08/23 13:43:57     29s] ERROR     IMPSE-110            1  File '%s' line %s: %s.                   
+[08/23 13:43:57     29s] ERROR     IMPSYT-6692          1  Invalid return code while executing '%s'...
+[08/23 13:43:57     29s] WARNING   IMPOPT-3000          1  Buffer footprint is not defined or is an...
+[08/23 13:43:57     29s] WARNING   IMPOPT-3001          1  Inverter footprint is not defined or is ...
+[08/23 13:43:57     29s] ERROR     TCLCMD-1230          1  The command set_analysis_view is called ...
+[08/23 13:43:57     29s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[08/23 13:43:57     29s] *** Message Summary: 4 warning(s), 3 error(s)
+[08/23 13:43:57     29s] 
+[08/23 13:43:57     29s] --- Ending "Innovus" (totcpu=0:00:29.9, real=0:00:42.0, mem=1483.5M) ---

@@ -1,0 +1,216 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.16-s082_1, built Fri Jun 7 09:42:52 PDT 2024
+Options:	-stylus -file pnr1.tcl 
+Date:		Fri Aug 23 14:29:53 2024
+Host:		npit.ic.rnd1 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Silver 4316 CPU @ 2.30GHz 30720KB)
+OS:		Red Hat Enterprise Linux Server 7.9 (Maipo)
+
+License:
+		[14:29:53.440257] Configured Lic search path (22.01-s003): 35266@npit-service1.iptime.org
+
+		invs	Innovus Implementation System	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Create and set the environment variable TMPDIR to /home/william/vlsi_fundamental/pnr/innovus_temp_27383_b4e5820c-b324-45d1-ae4f-f9a755a50538_npit.ic.rnd1_william_vobxJe.
+
+Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+#@ Processing -files option
+@innovus 1> source pnr1.tcl
+#@ Begin verbose source (pre): source pnr1.tcl
+@file 1: #######################################################
+@file 2: #                                                     
+@file 3: #  Innovus Command Logging File                     
+@file 4: #  Created on Fri Aug 23 11:14:22 2024                
+@file 5: #                                                     
+@file 6: #######################################################
+@file 7:
+@file 8: #@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+@file 9: #@(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+@file 10: #@(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+@file 11: #@(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+@file 12: #@(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+@file 13: #@(#)CDS: CPE v22.16-s050
+@file 14: #@(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+@file 15:
+@@file 16: set_db init_power_nets VDD
+@@file 17: set_db init_ground_nets VSS
+@@file 18: read_physical -lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+
+Loading LEF file ../lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file ../lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+@@file 19: read_netlist ../syn/outputs/counter_netlist.v -top counter
+#% Begin Load netlist data ... (date=08/23 14:30:22, mem=1312.1M)
+*** Begin netlist parsing (mem=1460.7M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../syn/outputs/counter_netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1463.699M, initial mem = 654.262M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1463.7M) ***
+#% End Load netlist data ... (date=08/23 14:30:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1315.6M, current mem=1315.6M)
+Set top cell to counter.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell counter ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 575 modules.
+** info: there are 21 stdCell insts.
+** info: there are 21 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 1526.129M, initial mem = 654.262M) ***
+@@file 20: read_mmmc sample.view
+#@ Begin verbose source sample.view (pre)
+@file 1:
+@@file 2: create_library_set -name max_timing\
+   -timing ../lib/slow_vdd1v0_basicCells.lib
+Reading max_timing timing library '/home/william/vlsi_fundamental/lib/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/william/vlsi_fundamental/lib/slow_vdd1v0_basicCells.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+@file 4:
+@@file 5: create_library_set -name min_timing\
+   -timing ../lib/fast_vdd1v0_basicCells.lib
+Reading min_timing timing library '/home/william/vlsi_fundamental/lib/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/william/vlsi_fundamental/lib/fast_vdd1v0_basicCells.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+@file 7:
+@@file 8: create_timing_condition -name default_mapping_tc_2\
+   -library_sets min_timing
+@@file 10: create_timing_condition -name default_mapping_tc_1\
+   -library_sets max_timing
+@file 12:
+@@file 13: create_rc_corner -name rccorners\
+   -cap_table ../captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+   -pre_route_res 1\
+   -post_route_res 1\
+   -pre_route_cap 1\
+   -post_route_cap 1\
+   -post_route_cross_cap 1\
+   -pre_route_clock_res 0\
+   -pre_route_clock_cap 0\
+   -qrc_tech ../QRC_Tech/gpdk045.tch
+@file 23:
+@@file 24: create_delay_corner -name max_delay\
+   -timing_condition {default_mapping_tc_1}\
+   -rc_corner rccorners
+@@file 27: create_delay_corner -name min_delay\
+   -timing_condition {default_mapping_tc_2}\
+   -rc_corner rccorners
+@file 30:
+@@file 31: create_constraint_mode -name sdc_cons\
+   -sdc_files\
+    ../syn/outputs/counter_sdc.sdc
+@file 34:
+@@file 35: create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+@@file 36: create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+@file 37:
+@@file 38: set_analysis_view -setup wc -hold bc
+**ERROR: (TCLCMD-1239):	The software has been initialized without timing library information into a physical-only mode of operation. Access to timing analysis related commands and functionality is not available in this mode.  To operate the software with full functionality you must exit or issue the freeDesign command - then reinitialize the system with a design configuration that includes a valid timing library configuration.
+**ERROR: (IMPSE-110):	File 'sample.view' line 38: {}.
+#@ End verbose source sample.view
+{}
+    while executing
+"set_analysis_view -setup wc -hold bc"
+    (file "sample.view" line 38)
+    invoked from within
+"::se_source_orig sample.view"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel [concat ::se_source_orig $args]"
+    invoked from within
+"if { !$no_encoding && $encodingName != ""  } {
+                  set st [uplevel [concat ::se_source_orig " -encoding " $encodingName " "  $args]]
+   ..."
+    invoked from within
+"if {[::SE::source_verbose_file_state $file_name] == 1} {
+              ::SE::source_verbose_start $file_name
+              if { !$no_encoding && $enco..."
+    invoked from within
+"if {$useTclVerbose} {
+          # use tcl internal method
+          set st ""
+          if {[::SE::source_verbose_file_state $file_name] == 1} {
+     ..."
+    invoked from within
+"if {$largeFile == 1} {
+    if {$enableVerbose == 0 && [::SE::isEchoFile] == 1} {
+      $putCmd "Sourcing $file_name"
+    }
+    set st [uplevel [concat..."
+    (procedure "source" line 185)
+    invoked from within
+"source sample.view"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 {source sample.view}"
+**ERROR: (IMPSE-110):	File 'pnr1.tcl' line 20: errors out.
+#@ End verbose source pnr1.tcl
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'pnr1.tcl' was returned and script processing was stopped. Review the following error in 'pnr1.tcl' then restart.
+Error info: pnr1.tcl: 
+    while executing
+"read_mmmc sample.view"
+    (file "pnr1.tcl" line 20)
+    invoked from within
+"::se_source_orig pnr1.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel [concat ::se_source_orig $args]"
+    invoked from within
+"if { !$no_encoding && $encodingName != ""  } {
+                  set st [uplevel [concat ::se_source_orig " -encoding " $encodingName " "  $args]]
+   ..."
+    invoked from within
+"if {[::SE::source_verbose_file_state $file_name] == 1} {
+              ::SE::source_verbose_start $file_name
+              if { !$no_encoding && $enco..."
+    invoked from within
+"if {$useTclVerbose} {
+          # use tcl internal method
+          set st ""
+          if {[::SE::source_verbose_file_state $file_name] == 1} {
+     ..."
+    invoked from within
+"if {$largeFile == 1} {
+    if {$enableVerbose == 0 && [::SE::isEchoFile] == 1} {
+      $putCmd "Sourcing $file_name"
+    }
+    set st [uplevel [concat..."
+    (procedure "source" line 185)
+    invoked from within
+"source pnr1.tcl"
+    invoked from within
+"::se::run_command_from_console "source pnr1.tcl""
+    invoked from within
+"eval_novus {::se::run_command_from_console "source pnr1.tcl"}"
+    (in namespace inscope "::" script line 1)
+    invoked from within
+"namespace inscope :: eval_novus "::se::run_command_from_console \"source $fileName\""".
+@innovus 2> 
+--------------------------------------------------------------------------------
+Exiting Innovus on Fri Aug 23 14:30:30 2024
+  Total CPU time:     0:00:30
+  Total real time:    0:00:38
+  Peak memory (main): 1410.27MB
+
+
+*** Memory Usage v#1 (Current mem = 1598.070M, initial mem = 654.262M) ***
+*** Message Summary: 3 warning(s), 4 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:30.5, real=0:00:37.0, mem=1598.1M) ---

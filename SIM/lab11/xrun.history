@@ -1,0 +1,2 @@
+#e1(21Aug2024:15:22:49): source ./xcelium.d/env.d/env.history.21Aug2024_15_22_49
+s1(21Aug2024:15:22:49):  xrun -access rwc register.v tb_reg.v -gui 

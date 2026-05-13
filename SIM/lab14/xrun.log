@@ -1,0 +1,53 @@
+xrun(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s005: Started on Aug 21, 2024 at 16:20:26 KST
+xrun
+	-access rwc
+	pipeline.v
+	tb_pipeline.v
+	-gui
+file: pipeline.v
+	module worklib.pipeline:v
+		errors: 0, warnings: 0
+file: tb_pipeline.v
+	module worklib.tb_pipeline:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_pipeline
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.pipeline:v <0x493ab6ef>
+			streams:   6, words:  1531
+		worklib.tb_pipeline:v <0x6a519b29>
+			streams:   7, words:  4446
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               8       8
+		Scalar wires:            2       -
+		Vectored wires:          4       -
+		Always blocks:           4       4
+		Initial blocks:          1       1
+		Pseudo assignments:      5       -
+		Process Clocks:          3       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_pipeline:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/tools/cadence/XCELIUMMAIN2403/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_pipeline.clk tb_pipeline.in1 tb_pipeline.in2 tb_pipeline.in3 tb_pipeline.piped_out tb_pipeline.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 200 NS + 0
+./tb_pipeline.v:45 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s005: Exiting on Aug 21, 2024 at 23:15:16 KST  (total: 06:54:50)

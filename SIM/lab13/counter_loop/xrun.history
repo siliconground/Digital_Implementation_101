@@ -1,0 +1,5 @@
+s1(16Feb2024:17:07:13):  xrun -access rwc counter_loop.v tb_counter_loop.v -gui 
+#e2(22Aug2024:10:28:02): source ./xcelium.d/env.d/env.history.22Aug2024_10_28_02
+s2(22Aug2024:10:28:02):  xrun -access rwc ./counter_loop.v ./tb_counter_loop.v -gui 
+#e3(22Aug2024:10:45:05): source ./xcelium.d/env.d/env.history.22Aug2024_10_45_05
+s3(22Aug2024:10:45:05):  xrun -access rwc ./counter_loop.v ./tb_counter_loop.v -gui 

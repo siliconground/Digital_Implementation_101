@@ -1,0 +1,26 @@
+xmelab(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	24.03-s005: Started on Aug 20, 2024 at 16:29:51 KST
+xmelab
+    -MESS
+    -access rwc
+    stimulus
+
+	Elaborating the design hierarchy:
+		Caching library 'fulladd4' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		fulladd4.stimulus:module <0x0d87f845>
+			streams:   4, words:  4672
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              6       3
+		Primitives:          20       3
+		Registers:            3       3
+		Scalar wires:         1       -
+		Expanded wires:       8       2
+		Initial blocks:       1       1
+		Pseudo assignments:   3       -
+	Writing initial simulation snapshot: fulladd4.stimulus:module
+TOOL:	xmelab(64)	24.03-s005: Exiting on Aug 20, 2024 at 16:29:51 KST  (total: 00:00:00)

@@ -1,0 +1,15 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Aug 21, 2024 at 10:51:32 KST
+xmvlog
+    -MESS
+    -linedebug
+    ./gate_delay.v
+    ./stimulus.v
+
+file: ./gate_delay.v
+	module worklib.gate_delay
+		errors: 0, warnings: 0
+file: ./stimulus.v
+	module worklib.stimulus
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Aug 21, 2024 at 10:51:32 KST  (total: 00:00:00)

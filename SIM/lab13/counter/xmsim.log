@@ -1,0 +1,22 @@
+xmsim(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmsim(64)	24.03-s005: Started on Aug 22, 2024 at 10:25:57 KST
+xmsim
+    -MESS
+    tb_counter
+    -gui
+
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_counter.clk tb_counter.cnt tb_counter.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 2150 NS + 0
+./tb_counter.v:27 		$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xmsim(64)	24.03-s005: Exiting on Aug 22, 2024 at 10:27:43 KST  (total: 00:01:46)

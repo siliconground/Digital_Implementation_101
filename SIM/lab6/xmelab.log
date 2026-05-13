@@ -1,0 +1,29 @@
+xmelab(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	24.03-s005: Started on Aug 21, 2024 at 10:55:54 KST
+xmelab
+    -MESS
+    -access +rwc
+    tb_clk_gating
+
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.clk_gating:module <0x7300c609>
+			streams:   0, words:     0
+		worklib.tb_clk_gating:module <0x7404ea8b>
+			streams:   8, words:  6366
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               2       2
+		Scalar wires:            3       -
+		Always blocks:           1       1
+		Initial blocks:          1       1
+		Cont. assignments:       0       1
+		Pseudo assignments:      2       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_clk_gating:module
+TOOL:	xmelab(64)	24.03-s005: Exiting on Aug 21, 2024 at 10:55:54 KST  (total: 00:00:00)

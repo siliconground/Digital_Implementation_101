@@ -1,0 +1,23 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Aug 23 14:11:17 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v22.16-s082_1 (64bit) 06/07/2024 09:42 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 22.16-s082_1 NR240531-0106/22_16-UB (database version 18.20.629) {superthreading v2.20}
+#@(#)CDS: AAE 22.16-s024 (64bit) 06/07/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 22.16-s024_1 () Jun  7 2024 03:27:16 ( )
+#@(#)CDS: SYNTECH 22.16-s011_1 () May 27 2024 22:19:09 ( )
+#@(#)CDS: CPE v22.16-s050
+#@(#)CDS: IQuantus/TQuantus 21.2.2-s347 (64bit) Mon Dec 11 17:11:11 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+gui_hide
+set_db init_power_nets VDD
+set_db init_power_nets VSS
+set_analysis_view -setup wc -hold bc
+read_physical lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+read_physical -lef {../lef/gsclib045_tech.lef ../lef/gsclib045_macro.lef}
+read_netlist ../syn/outputs/counter_netlist.v -top counter
+exit

@@ -1,0 +1,6 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(16Feb2024:01:02:57):( xrun -access rwc tb_trrafic_signal_fsm.v traffic_signal_fsm.v )
+s2::(16Feb2024:01:03:09):( xrun -access rwc tb_trrafic_signal_fsm.v traffic_signal_fsm.v -gui )

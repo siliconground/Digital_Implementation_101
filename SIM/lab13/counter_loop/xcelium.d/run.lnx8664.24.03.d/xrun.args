@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-access
+rwc
+./counter_loop.v
+./tb_counter_loop.v
+-gui

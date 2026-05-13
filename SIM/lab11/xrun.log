@@ -1,0 +1,53 @@
+xrun(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s005: Started on Aug 21, 2024 at 15:22:49 KST
+xrun
+	-access rwc
+	register.v
+	tb_reg.v
+	-gui
+file: register.v
+	module worklib.register:v
+		errors: 0, warnings: 0
+file: tb_reg.v
+	module worklib.tb_reg:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_reg
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.register:v <0x463a8448>
+			streams:   3, words:   809
+		worklib.tb_reg:v <0x42214bd1>
+			streams:   6, words:  3681
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               6       6
+		Scalar wires:            4       -
+		Vectored wires:          2       -
+		Always blocks:           3       3
+		Initial blocks:          1       1
+		Pseudo assignments:      4       -
+		Process Clocks:          1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_reg:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/tools/cadence/XCELIUMMAIN2403/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_reg.clk tb_reg.in1 tb_reg.in2 tb_reg.out1 tb_reg.out2 tb_reg.rst_n
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 2500 NS + 0
+./tb_reg.v:43 	#200 $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s005: Exiting on Aug 21, 2024 at 15:35:45 KST  (total: 00:12:56)

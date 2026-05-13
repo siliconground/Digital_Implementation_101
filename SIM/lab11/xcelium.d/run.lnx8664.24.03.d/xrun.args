@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-access
+rwc
+register.v
+tb_reg.v
+-gui

@@ -1,0 +1,19 @@
+xmvlog(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	24.03-s005: Started on Aug 20, 2024 at 16:29:48 KST
+xmvlog
+    -MESS
+    -linedebug
+    ./fulladd.v
+    ./fulladd4.v
+    ./stimulus.v
+
+file: ./fulladd.v
+	module fulladd4.fulladd
+		errors: 0, warnings: 0
+file: ./fulladd4.v
+	module fulladd4.fulladd4
+		errors: 0, warnings: 0
+file: ./stimulus.v
+	module fulladd4.stimulus
+		errors: 0, warnings: 0
+TOOL:	xmvlog(64)	24.03-s005: Exiting on Aug 20, 2024 at 16:29:48 KST  (total: 00:00:00)

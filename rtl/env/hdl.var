@@ -1,0 +1,2 @@
+define XMVLOGOPTS -MESS -linedebug
+define XMELABOPTS -access RWC -MESS

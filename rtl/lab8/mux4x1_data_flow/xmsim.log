@@ -1,0 +1,23 @@
+xmsim(64): 24.03-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xmsim(64)	24.03-s005: Started on Oct 04, 2024 at 11:19:27 KST
+xmsim
+    -MESS
+    tb_mux_4_to_1
+    -gui
+
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> run
+$time=10 ns sel1 = 0 sel0 = 0 in0 = 1 in1 = 0 in2 = 0 in3 = 0 out = 1
+$time=20 ns sel1 = 0 sel0 = 1 in0 = 0 in1 = 1 in2 = 0 in3 = 0 out = 1
+$time=30 ns sel1 = 1 sel0 = 0 in0 = 0 in1 = 0 in2 = 1 in3 = 0 out = 1
+$time=40 ns sel1 = 1 sel0 = 1 in0 = 0 in1 = 0 in2 = 0 in3 = 1 out = 1
+Simulation complete via $finish(1) at time 40 NS + 0
+./tb_mux4_to_1.v:48 	$finish;
+xcelium> ^C
+xcelium> ^C
+xcelium> exit
+TOOL:	xmsim(64)	24.03-s005: Exiting on Oct 04, 2024 at 11:20:32 KST  (total: 00:01:05)

@@ -1,0 +1,50 @@
+xrun: 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s012: Started on Feb 15, 2024 at 16:54:05 KST
+xrun
+	-access rwc
+	./clk_gating.v
+	./tb_clk_gating.v
+	-gui
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_clk_gating
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.clk_gating:v <0x0100d1dd>
+			streams:   0, words:     0
+		worklib.tb_clk_gating:v <0x3b9c1422>
+			streams:   6, words:  3984
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               2       2
+		Scalar wires:            3       -
+		Always blocks:           1       1
+		Initial blocks:          1       1
+		Cont. assignments:       0       1
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_clk_gating:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_clk_gating.clk_en tb_clk_gating.in_clk tb_clk_gating.out_clk
+Created probe 1
+xcelium> run
+Initial Value [                   0]
+Clock enable [                 100]
+Clock disable [                 200]
+Simulation ends [                 300]
+Simulation complete via $finish(1) at time 300 NS + 0
+./tb_clk_gating.v:35 	$finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	22.03-s012: Exiting on Feb 15, 2024 at 16:56:59 KST  (total: 00:02:54)
