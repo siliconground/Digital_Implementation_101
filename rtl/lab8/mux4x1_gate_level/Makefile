@@ -1,5 +1,6 @@
 clean: 
 	rm -rf cds.lib hdl.var *.lib waves.shm *.log *.key
+	rm -rf .simvision
 set: 
 	touch cds.lib hdl.var
 	mkdir mux.lib

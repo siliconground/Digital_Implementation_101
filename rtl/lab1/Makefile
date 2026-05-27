@@ -2,6 +2,7 @@ clean:
 	rm -rf xcelium.d *.log *.history *.key
 	rm -rf worklib cds.lib hdl.var
 	rm -rf *.lib *.shm
+	rm -rf .simvision
 set:
 	mkdir clock.lib
 	touch ./cds.lib
